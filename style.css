@@ -1,42 +1,48 @@
 @import url('https://fonts.googleapis.com/css?family=Sacramento');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Protest+Riot&display=swap');
-#card {
-   height:500px;
-   width:800px;
-   margin:5em auto;
-   position: fixed;
-  top: -15px;
-   left: 25%;
-   display:flex;
-   visibility:hidden;
+
+#carta {
+  height: 500px;
+  width: 800px;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  visibility: hidden;
+  justify-content: center;
+  align-items: center;
 }
-#card h2 {
+
+#carta h2 {
    font-size:3em;
    margin:0;
    color:pink;
    text-align: center;
 }
-#card p {
-   font-size: 1em;
+#carta p {
+   font-size: 1.1em;
    text-align: justify;
    padding-left: 10px; /* Espacio en blanco a la izquierda */
    padding-right: 10px; /* Espacio en blanco a la derecha */
 }
 
 
-.side {
+.lado {
    background:#eee;
    height:550px;
    width:400px;
 /*    border:1px solid red; */
    padding:10px;
 }
-.side.one {
+.lado.uno {
    width:320px;
    transform:skew(10deg,20deg);
    background:linear-gradient(90deg, #fff, #fff 40%, #ddd);
 }
-.side.two {
+.lado.dos {
    transform:skew(10deg,-15deg);
    background:linear-gradient(-90deg, #fff, #fff 40%, #f0f0f0);
 }
@@ -47,24 +53,23 @@ body {
    justify-content: center;
    height: 100vh;
    font-family: "Pacifico", cursive;
-
-   background: url(background.png);
+   background: url(fondo.png);
    background-position: center;
     background-size: cover;
    overflow: hidden;
  }
  
- .valentines-day {
+ .dia-de-san-valentin {
    position: relative;
    cursor: pointer;
  }
  
- .envelope {
+ .sobre {
    position: relative;
    filter: drop-shadow(0 0 25px rgba(0,0,0,.3));
  }
  
- .envelope:before {
+ .sobre:before {
    content:"";
    position: absolute;
    width:254px;
@@ -76,7 +81,7 @@ body {
    top:-82px;
  }
  
- .envelope:after {
+ .sobre:after {
    content:"";
    position: absolute;
    background-color: #ff9494;
@@ -86,7 +91,7 @@ body {
    top:45px;
  }
  
- .heart {
+ .corazon {
    position: relative;
    background-color: #e01911;
    display: inline-block;
@@ -99,7 +104,7 @@ body {
    transition: .5s;
  }
    
- .heart:before, .heart:after {
+ .corazon:before, .corazon:after {
    content:"";
    background-color: #e01911;
    border-radius:50%;
@@ -108,15 +113,15 @@ body {
    position: absolute;
    }
    
- .heart:before {
+ .corazon:before {
    top:-100px;
    left:0;}
    
- .heart:after {
+ .corazon:after {
    left:100px;
    top:0;}
  
- .front {
+ .frente {
    position: absolute;
    width:0;
    height:0;
@@ -128,7 +133,7 @@ body {
    z-index:4;
  }
  
- .front:before {
+ .frente:before {
    content:"";
    position: absolute;
    width:0;
@@ -140,7 +145,7 @@ body {
    left:-170px;
  }
  
- .front:after {
+ .frente:after {
    width:0;
    height:0;
    position: absolute;
@@ -152,7 +157,7 @@ body {
    left:-170px;
  }
  
- .text {
+ .texto {
    position: absolute;
    font-family: 'adelia';
    letter-spacing:5px;
@@ -164,11 +169,11 @@ body {
    transition: .5s;
  }
  
- .valentines-day:hover .heart {
+ .dia-de-san-valentin:hover .corazon {
    transform: translateY(-50px) rotate(-45deg);
  }
  
- .valentines-day:hover .text {
+ .dia-de-san-valentin:hover .texto {
    transform: translateY(-50px);
  }
  
@@ -177,9 +182,9 @@ body {
   position: absolute;
   filter: drop-shadow(0 0 1em rgba(0,0,0,0.5));
   pointer-events: none;
-  animation: animHeart 1s linear infinite;
+  animation: animCorazon 1s linear infinite;
 }
-@keyframes animHeart {
+@keyframes animCorazon {
   0%,100%{
       opacity: 0;
   }
@@ -192,11 +197,11 @@ span::before{
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url(heart.png);
+  background: url(corazon.png);
   background-size: cover;
-  animation: heart 1s linear infinite;
+  animation: corazon 1s linear infinite;
 }
-@keyframes heart {
+@keyframes corazon {
   0%{
       transform: translate(0) rotate(0deg);
   }
@@ -204,6 +209,3 @@ span::before{
       transform: translate(20em) rotate(360deg);
   }
 }
-
-
- 
